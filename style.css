@@ -1,15 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 * {
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Inter', sans-serif;
+    background: hsl(36, 100%, 99%);
+    width: 85vw;
+    padding: 100px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header"
+        "main main sidebar"
+        "article article article"
+        "footer footer footer";
+}
+
+header {
+    background: rgb(0, 204, 255);
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 45px;
+}
+
+svg {
+    margin-right: 600px;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    padding-right: 30px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "imagem imagem"
+        "titulo texto"
+        "titulo botao";
+}
+
+main img {
+    grid-area: imagem;
+    width: 100%;
 }
 
 h1 {
+    grid-area: titulo;
+    font-size: 5em;
     font-weight: 800;
 }
 
@@ -17,9 +64,54 @@ h2, h3 {
     font-weight: 700;
 }
 
-p{
+p {
     font-weight: 400;
+    color: hsl(236, 13%, 42%);
 }
+
+main p {
+    grid-area: texto;
+    font-size: 1.2em;
+}
+
+button {
+    grid-area: botao;
+    width: 50%;
+    height: 50px;
+    background: hsl(5, 85%, 63%);
+    font-size: 1em;
+    color: hsl(36, 100%, 99%);
+    text-transform: uppercase;
+    font-weight: 800;
+    border: none;
+}
+
+sidebar {
+    background: hsl(240, 100%, 5%);
+    grid-area: sidebar;
+    width: 100%;
+    padding: 20px;
+    color: hsl(36, 100%, 99%);
+}
+
+sidebar h2 {
+    color: hsl(35, 77%, 62%);
+}
+
+article {
+    background: rgb(85, 0, 255);
+    grid-area: article;
+    width: 100%;
+    padding: 20px;
+}
+
+footer {
+    width: 100%;
+    grid-area: footer;
+    background: rgb(255, 0, 149);
+    padding: 20px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
