@@ -8,8 +8,8 @@
 body {
     font-family: 'Inter', sans-serif;
     background: hsl(36, 100%, 99%);
-    width: 85vw;
-    padding: 100px;
+    max-width: 1440px;
+    margin: 100px 150px;
     display: grid;
     grid-template-rows: auto;
     grid-template-areas:
@@ -17,17 +17,15 @@ body {
         "main main sidebar"
         "article article article"
         "footer footer footer";
+    gap: 30px;
 }
 
 header {
-    background: rgb(0, 204, 255);
+    background-color: rgb(0, 242, 255);
     grid-area: header;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 45px;
 }
 
 svg {
@@ -39,14 +37,14 @@ a {
 }
 
 main {
+    background: rgb(89, 255, 0);
     grid-area: main;
-    padding-right: 30px;
     display: grid;
-    grid-template-rows: auto;
     grid-template-areas:
         "imagem imagem"
         "titulo texto"
         "titulo botao";
+    gap: 20px;
 }
 
 main img {
@@ -56,41 +54,44 @@ main img {
 
 h1 {
     grid-area: titulo;
-    font-size: 5em;
+    font-size: 2.4em;
     font-weight: 800;
+    width: 100%;
 }
 
-h2, h3 {
+h2,
+h3 {
     font-weight: 700;
 }
 
 p {
     font-weight: 400;
     color: hsl(236, 13%, 42%);
+    font-size: 0.86em;
 }
 
 main p {
     grid-area: texto;
-    font-size: 1.2em;
 }
 
 button {
     grid-area: botao;
     width: 50%;
     height: 50px;
+    margin-top: 50px;
     background: hsl(5, 85%, 63%);
-    font-size: 1em;
+    font-size: 1.2em;
     color: hsl(36, 100%, 99%);
     text-transform: uppercase;
     font-weight: 800;
     border: none;
 }
 
+
 sidebar {
     background: hsl(240, 100%, 5%);
     grid-area: sidebar;
-    width: 100%;
-    padding: 20px;
+    padding: 30px;
     color: hsl(36, 100%, 99%);
 }
 
@@ -102,18 +103,17 @@ article {
     background: rgb(85, 0, 255);
     grid-area: article;
     width: 100%;
-    padding: 20px;
+    display: flex;
 }
 
 footer {
     width: 100%;
     grid-area: footer;
     background: rgb(255, 0, 149);
-    padding: 20px;
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 2em;
     text-align: center;
 }
 
